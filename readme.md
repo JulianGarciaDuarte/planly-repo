@@ -29,7 +29,7 @@ sudo docker-compose restart
 
 sudo docker container restart [Nombre del contenedor -- Que es el mismo del servicio --]
 ## Para editar los archivos
-Editar los archivos normalmente como con normalidad y usar el comando propuesto para recargar el proyecto y ver los cambios reflejados.
+Editar los archivos con normalidad y usar el comando propuesto para recargar el proyecto y ver los cambios reflejados.
 
 ## Para ver los mensajes de error
 Si automaticamente no corre en la consola donde se ejecuto el docker-compose up una lista de logs, hacer el siguiente procedimiento:
