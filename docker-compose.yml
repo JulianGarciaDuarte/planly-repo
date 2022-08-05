@@ -1,0 +1,35 @@
+
+services:
+
+  user-handler:
+    container_name: raccoon
+    build:
+      context: ./services/raccoon
+    ports:
+      - "80:80"
+    networks:
+      - back-net
+      - front-net
+    volumes:
+      - ./services/raccoon/:/raccoon
+
+  db:
+    container_name: chip-depot
+    build:
+      context: ./services/chip-depot
+    restart: always
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: planly
+    ports:
+      - "5432:5432"
+    networks:
+      - back-net
+    volumes:
+      - ./services/chip-depot/data:/var/lib/postgresql/data
+      - ./services/chip-depot/:/chip-depot
+
+networks:
+  back-net: {}
+  front-net: {}
