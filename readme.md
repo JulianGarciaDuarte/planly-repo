@@ -23,10 +23,11 @@ Si hay errores verificar que docker-compose este instalado
 ## Para ver los cambios realizados
 Para probar cambios sobre el codigo digitar (En la direccion del docker-compose.yml):
 
-sudo docker-compose restart [Nombre del contenedor -- Que es el mismo del servicio --]
+sudo docker-compose restart 
 
 *Por razones de rendimiento, si solo se realizaron cambios a un servicio es preferible digitar el siguiente comando*
-sudo docker container 
+
+sudo docker container restart [Nombre del contenedor -- Que es el mismo del servicio --]
 ## Para editar los archivos
 Editar los archivos normalmente como con normalidad y usar el comando propuesto para recargar el proyecto y ver los cambios reflejados.
 
