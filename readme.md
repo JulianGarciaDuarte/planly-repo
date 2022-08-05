@@ -12,6 +12,7 @@ sudo docker-compose up
 
 ### Desde Windows:
 *Es necesario tener docker y wsl*
+
 Abrir wsl y digitar:
 
 sudo docker-compose up
@@ -22,7 +23,7 @@ Si hay errores verificar que docker-compose este instalado
 ## Para ver los cambios realizados
 Para probar cambios sobre el codigo digitar (En la direccion del docker-compose.yml):
 
-sudo docker-compose restart
+sudo docker-compose restart [Nombre del contenedor -- Que es el mismo del servicio --]
 
 *Por razones de rendimiento, si solo se realizaron cambios a un servicio es preferible digitar el siguiente comando*
 sudo docker container 
@@ -40,8 +41,8 @@ Si automaticamente no corre en la consola donde se ejecuto el docker-compose up 
 La ip para cada contenedor (y por ende cada servicio) es el nombre del contenedor, a continuacion se listan las direcciones para los servicios actualmente existentes.
 
 SERVICIO    : DIRECCION
-chip-depot  : chip-depot
-raccoon     : raccoon
+1. chip-depot  : chip-depot
+2. raccoon     : raccoon
 
 ## Sobre la edicion de nombres de carpetas de servicios
 Si es un archivo principal que contiene a un servicio, avisarle al administrador de los contenedores pls. De otra forma, editarlos con tranquilidad.
